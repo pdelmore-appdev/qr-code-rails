@@ -6,7 +6,13 @@ Rails.application.routes.draw do
   # /wifi
   # /sms
   
-  get("/", {:controller => "application", :action => "homepage"})
+  get("/", {:controller => "application", :action => "index"})
+
+  get("/text", {:controller => "qr_codes", :action => "text"})
+
+  get("/url", {:controller => "qr_codes", :action => "url"})
+
+  get("/wifi", {:controller => "qr_codes", :action => "wifi"})
 
   # Solutions below.
 
